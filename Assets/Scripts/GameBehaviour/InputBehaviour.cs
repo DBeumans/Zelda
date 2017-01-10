@@ -2,6 +2,4 @@
 using System.Collections;
 
 public class InputBehaviour : MonoBehaviour {
-
-
 }
