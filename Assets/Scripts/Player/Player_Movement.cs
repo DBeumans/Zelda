@@ -1,16 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player_Movement : MonoBehaviour {
-    void FixedUpdate() {
-        var x = Input.GetAxis("Horizontal");
-        var z = Input.GetAxis("Vertical");
+public class Player_Movement : InputBehaviour {
 
-        Vector3 direction = new Vector3(x, 0f, z);
+    [SerializeField]
+    float _movementSpeed = 20f;
+    void Update() {
+        KeysCheck();
+        Vector3 direction = new Vector3(_x, 0f, _z);
 
         if (direction.magnitude > 1) {
             direction.Normalize();
         }
-        transform.Translate(direction);
+        transform.Translate(direction * _movementSpeed * Time.deltaTime);
+
+        if (_space)
+        {
+            // jump logic here.
+        }
+        
     }
 }
