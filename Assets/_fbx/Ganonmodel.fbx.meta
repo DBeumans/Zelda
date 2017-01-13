@@ -1,0 +1,140 @@
+fileFormatVersion: 2
+guid: 5b6e8e373fd13bc499beeae6f702567e
+timeCreated: 1484310532
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: borst
+    100002: cape
+    100004: ganon
+    100006: //RootNode
+    100008: Head
+    100010: heup
+    100012: L_Been_boven
+    100014: L_been_onder
+    100016: L_bovenarm
+    100018: L_ear
+    100020: L_hand
+    100022: L_onderarm
+    100024: L_Voet
+    100026: staff
+    400000: borst
+    400002: cape
+    400004: ganon
+    400006: //RootNode
+    400008: Head
+    400010: heup
+    400012: L_Been_boven
+    400014: L_been_onder
+    400016: L_bovenarm
+    400018: L_ear
+    400020: L_hand
+    400022: L_onderarm
+    400024: L_Voet
+    400026: staff
+    2300000: borst
+    2300002: cape
+    2300004: Head
+    2300006: heup
+    2300008: L_Been_boven
+    2300010: L_been_onder
+    2300012: L_bovenarm
+    2300014: L_ear
+    2300016: L_hand
+    2300018: L_onderarm
+    2300020: L_Voet
+    2300022: staff
+    3300000: borst
+    3300002: cape
+    3300004: Head
+    3300006: heup
+    3300008: L_Been_boven
+    3300010: L_been_onder
+    3300012: L_bovenarm
+    3300014: L_ear
+    3300016: L_hand
+    3300018: L_onderarm
+    3300020: L_Voet
+    3300022: staff
+    4300000: cape
+    4300002: staff
+    4300004: L_bovenarm
+    4300006: L_onderarm
+    4300008: L_hand
+    4300010: L_ear
+    4300012: heup
+    4300014: borst
+    4300016: Head
+    4300018: L_Voet
+    4300020: L_Been_boven
+    4300022: L_been_onder
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
