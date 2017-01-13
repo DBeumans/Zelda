@@ -4,23 +4,22 @@ using System.Collections.Generic;
 
 public class CameraMovement : MonoBehaviour
 {
-    /*
+    
     Camera _camera;
-
-    [SerializeField]
-    Transform _target;
-
     [SerializeField]
     bool _smooth;
     [SerializeField]
     float _smoothSpeed = .1f;
+    
+    [SerializeField]
+    private GameObject[] playerPos;
+
     Vector3 _offset;
-    /*
-        opslaan in array,list of dictionary.
-    */
-    /*
+
     [SerializeField]
     float _angleX, _angleY, _angleZ;
+    [SerializeField] float _default_angleY;
+    
     [SerializeField]
     float _posX, _posY, _posZ;
 
@@ -30,16 +29,16 @@ public class CameraMovement : MonoBehaviour
     void Start()
     {
         _camera = GetComponent<Camera>();
-
         StartCoroutine(CameraRotation());
         StartCoroutine(CameraPosition());
         StartCoroutine(CameraFieldOfView());
+        StartCoroutine(ZoomInOut());
     }
 
     void FixedUpdate()
     {
-        
-        Vector3 _desiredPosition = _target.transform.position + _offset;
+     
+        Vector3 _desiredPosition = playerPos[0].transform.position + _offset;
         if(_smooth)
         {
             transform.position = Vector3.Lerp(transform.position, _desiredPosition, _smoothSpeed);
@@ -48,14 +47,15 @@ public class CameraMovement : MonoBehaviour
         {
             transform.position = _desiredPosition;
         }
+        
     }
 
     IEnumerator CameraRotation()
     {
         while(true)
         {
-            transform.eulerAngles = new Vector3(_angleX,_angleY,_angleZ);
-            yield return null;
+            //transform.eulerAngles = new Vector3(_angleX,_angleY,_angleZ);
+            yield return new WaitForSeconds(.5f);
         }
     }
 
@@ -72,25 +72,11 @@ public class CameraMovement : MonoBehaviour
     {
         while (true)
         {
-
             _camera.fieldOfView = _fov;
             yield return null;
         }
     }
-    */
 
-    private Camera cameraRef;
-    [SerializeField]
-    private GameObject[] playerPos;
-
-    void Start()
-    {
-        cameraRef = GetComponent<Camera>();
-        Debug.Log(playerPos[0].transform.position);
-        Debug.Log(playerPos[1].transform.position);
-        Debug.Log(cameraRef.tag);
-        StartCoroutine(ZoomInOut());
-    }
 
     IEnumerator ZoomInOut()
     {
@@ -100,9 +86,19 @@ public class CameraMovement : MonoBehaviour
             {
 
                 Vector3 lookPoint = Vector3.Lerp(playerPos[0].transform.position, playerPos[1].transform.position, 0.5f);
-                cameraRef.transform.LookAt(lookPoint);
 
+                Vector3 _desiredPosition = transform.position + _offset;
 
+                float distance = Vector3.Distance(playerPos[0].transform.position, playerPos[1].transform.position);
+
+                if(distance < 10)
+                {
+                    _camera.transform.LookAt(lookPoint);
+                }
+                else
+                {
+                    _camera.transform.LookAt((playerPos[0].transform.position));
+                }
                 yield return new WaitForSeconds(0.02f);
             }
 
