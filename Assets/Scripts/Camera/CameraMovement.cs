@@ -2,7 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class CameraMovement : MonoBehaviour {
+public class CameraMovement : MonoBehaviour
+{
+    /*
+    Camera _camera;
 
     [SerializeField]
     Transform _target;
@@ -15,15 +18,22 @@ public class CameraMovement : MonoBehaviour {
     /*
         opslaan in array,list of dictionary.
     */
+    /*
     [SerializeField]
     float _angleX, _angleY, _angleZ;
     [SerializeField]
     float _posX, _posY, _posZ;
+
+    [SerializeField]
+    float _fov; // camera field of view.
     
     void Start()
     {
+        _camera = GetComponent<Camera>();
+
         StartCoroutine(CameraRotation());
         StartCoroutine(CameraPosition());
+        StartCoroutine(CameraFieldOfView());
     }
 
     void FixedUpdate()
@@ -55,6 +65,47 @@ public class CameraMovement : MonoBehaviour {
         {
             _offset = new Vector3(_posX,_posY,_posZ);
             yield return null;
+        }
+    }
+
+    IEnumerator CameraFieldOfView()
+    {
+        while (true)
+        {
+
+            _camera.fieldOfView = _fov;
+            yield return null;
+        }
+    }
+    */
+
+    private Camera cameraRef;
+    [SerializeField]
+    private GameObject[] playerPos;
+
+    void Start()
+    {
+        cameraRef = GetComponent<Camera>();
+        Debug.Log(playerPos[0].transform.position);
+        Debug.Log(playerPos[1].transform.position);
+        Debug.Log(cameraRef.tag);
+        StartCoroutine(ZoomInOut());
+    }
+
+    IEnumerator ZoomInOut()
+    {
+        while (true)
+        {
+            if (playerPos[0] != null && playerPos[1] != null)
+            {
+
+                Vector3 lookPoint = Vector3.Lerp(playerPos[0].transform.position, playerPos[1].transform.position, 0.5f);
+                cameraRef.transform.LookAt(lookPoint);
+
+
+                yield return new WaitForSeconds(0.02f);
+            }
+
         }
     }
 }
