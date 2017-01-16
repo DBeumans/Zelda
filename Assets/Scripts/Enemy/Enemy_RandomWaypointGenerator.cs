@@ -4,17 +4,26 @@ using System.Collections;
 public class Enemy_RandomWaypointGenerator : MonoBehaviour {
 
     Enemy_WaypointBehaviour _enemyWaypointBehaviour;
+
+    [SerializeField]
+    GameObject _cube; // The waypoints generate inside this cube.
+
     float _minimalX, _maximalX;
     float _minimalY, _maximalY;
     float _minimalZ, _maximalZ;
 
-    float _time = 1f;
     void Start()
     {
-        _minimalX = -20; _maximalX = 20;
-        _minimalY = -20; _maximalY = 20;
-        _minimalZ = -20; _maximalZ = 20;
-        
+        // X
+        _minimalX = -_cube.transform.localScale.x / 2;
+        _maximalX = _cube.transform.localScale.x / 2;
+        // Y 
+        _minimalY = -_cube.transform.localScale.y / 2;
+        _maximalY = _cube.transform.localScale.y / 2;
+        // Z
+        _minimalZ = -_cube.transform.localScale.z / 2;
+        _maximalZ = _cube.transform.localScale.z / 2;
+
         _enemyWaypointBehaviour = GetComponent<Enemy_WaypointBehaviour>();
         StartCoroutine(GenerateWayPoint());
     }
