@@ -14,10 +14,6 @@ public class Player_Movement : InputBehaviour {
         }
         transform.Translate(direction * _movementSpeed * Time.deltaTime);
 
-        if (_space)
-        {
-            // jump logic here.
-        }
         
     }
 }
