@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 8506ff27ea88fc94ba107fb985d2af43
+timeCreated: 1485174475
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: enemy:borst
+    100002: enemy:ganon
+    100004: enemy:Head
+    100006: enemy:Head 1
+    100008: enemy:Heup
+    100010: enemy:heup
+    100012: enemy:L_Been_boven
+    100014: enemy:L_been_onder
+    100016: enemy:L_bovenarm
+    100018: enemy:L_bovenbeen
+    100020: enemy:L_ear
+    100022: enemy:L_eblow
+    100024: enemy:L_enkel
+    100026: enemy:L_hand
+    100028: enemy:L_hand 1
+    100030: enemy:L_knee
+    100032: enemy:L_onderarm
+    100034: enemy:L_pols
+    100036: enemy:L_schouder
+    100038: enemy:L_Voet
+    100040: enemy:L_voet
+    100042: enemy:R_bovenbeen
+    100044: enemy:R_elbow
+    100046: enemy:R_enkel
+    100048: enemy:R_hand
+    100050: enemy:R_knee
+    100052: enemy:R_pols
+    100054: enemy:R_schouder
+    100056: enemy:R_voet
+    100058: enemy:Root_joint
+    100060: enemy:Rug
+    100062: enemy:staff
+    100064: //RootNode
+    400000: enemy:borst
+    400002: enemy:ganon
+    400004: enemy:Head
+    400006: enemy:Head 1
+    400008: enemy:Heup
+    400010: enemy:heup
+    400012: enemy:L_Been_boven
+    400014: enemy:L_been_onder
+    400016: enemy:L_bovenarm
+    400018: enemy:L_bovenbeen
+    400020: enemy:L_ear
+    400022: enemy:L_eblow
+    400024: enemy:L_enkel
+    400026: enemy:L_hand
+    400028: enemy:L_hand 1
+    400030: enemy:L_knee
+    400032: enemy:L_onderarm
+    400034: enemy:L_pols
+    400036: enemy:L_schouder
+    400038: enemy:L_Voet
+    400040: enemy:L_voet
+    400042: enemy:R_bovenbeen
+    400044: enemy:R_elbow
+    400046: enemy:R_enkel
+    400048: enemy:R_hand
+    400050: enemy:R_knee
+    400052: enemy:R_pols
+    400054: enemy:R_schouder
+    400056: enemy:R_voet
+    400058: enemy:Root_joint
+    400060: enemy:Rug
+    400062: enemy:staff
+    400064: //RootNode
+    4300000: enemy:L_bovenarm
+    4300002: enemy:L_onderarm
+    4300004: enemy:L_hand
+    4300006: enemy:staff
+    4300008: enemy:L_ear
+    4300010: enemy:heup
+    4300012: enemy:borst
+    4300014: enemy:Head
+    4300016: enemy:L_Voet
+    4300018: enemy:L_Been_boven
+    4300020: enemy:L_been_onder
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: enemy:borst
+    13700002: enemy:Head
+    13700004: enemy:heup
+    13700006: enemy:L_Been_boven
+    13700008: enemy:L_been_onder
+    13700010: enemy:L_bovenarm
+    13700012: enemy:L_ear
+    13700014: enemy:L_hand
+    13700016: enemy:L_onderarm
+    13700018: enemy:L_Voet
+    13700020: enemy:staff
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
