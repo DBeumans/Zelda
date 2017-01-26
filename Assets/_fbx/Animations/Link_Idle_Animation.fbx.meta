@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 211127900f53a394da073bbff723061a
-timeCreated: 1485433935
+guid: 85db51d3a09e03e4d90b793ea4fa223c
+timeCreated: 1485464997
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -62,7 +62,7 @@ ModelImporter:
     400052: Characterskibinded:character:voet1
     400054: //RootNode
     4300000: Characterskibinded:character:Charactermodel:Characterskibinded:character:Charactermodel:character1
-    7400000: Player_Jump_Attack
+    7400000: Player_Idle
     9500000: //RootNode
     13700000: Characterskibinded:character:Charactermodel:Characterskibinded:character:Charactermodel:character1
   materials:
@@ -87,17 +87,17 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Player_Jump_Attack
+      name: Player_Idle
       takeName: Take 001
-      firstFrame: 0
-      lastFrame: 45
+      firstFrame: 1
+      lastFrame: 15
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -209,7 +209,7 @@ ModelImporter:
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
-    skeletonHasParents: 0
+    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1
