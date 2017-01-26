@@ -1,0 +1,131 @@
+fileFormatVersion: 2
+guid: 33683d6dd4c164f4698f175dfd633c97
+timeCreated: 1485433935
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Characterskibinded:character:Charactermodel:Characterskibinded:character:Charactermodel:character1
+    100002: Characterskibinded:character:Elbow
+    100004: Characterskibinded:character:Elbow1
+    100006: Characterskibinded:character:enkel
+    100008: Characterskibinded:character:enkel1
+    100010: Characterskibinded:character:Hair_1
+    100012: Characterskibinded:character:Hair_end
+    100014: Characterskibinded:character:hand
+    100016: Characterskibinded:character:hand1
+    100018: Characterskibinded:character:Hiar_2
+    100020: Characterskibinded:character:joint1
+    100022: Characterskibinded:character:Joints_hip
+    100024: Characterskibinded:character:Joints_L_Dijbeen
+    100026: Characterskibinded:character:Joints_L_Schouder
+    100028: Characterskibinded:character:Joints_Pelvis
+    100030: Characterskibinded:character:Joints_R_Dijbeen
+    100032: Characterskibinded:character:Joints_R_Schouder
+    100034: Characterskibinded:character:knee
+    100036: Characterskibinded:character:knee1
+    100038: Characterskibinded:character:nek
+    100040: Characterskibinded:character:Pols
+    100042: Characterskibinded:character:Pols1
+    100044: Characterskibinded:character:Root
+    100046: Characterskibinded:character:rugboven
+    100048: Characterskibinded:character:rugonder
+    100050: Characterskibinded:character:voet
+    100052: Characterskibinded:character:voet1
+    100054: //RootNode
+    400000: Characterskibinded:character:Charactermodel:Characterskibinded:character:Charactermodel:character1
+    400002: Characterskibinded:character:Elbow
+    400004: Characterskibinded:character:Elbow1
+    400006: Characterskibinded:character:enkel
+    400008: Characterskibinded:character:enkel1
+    400010: Characterskibinded:character:Hair_1
+    400012: Characterskibinded:character:Hair_end
+    400014: Characterskibinded:character:hand
+    400016: Characterskibinded:character:hand1
+    400018: Characterskibinded:character:Hiar_2
+    400020: Characterskibinded:character:joint1
+    400022: Characterskibinded:character:Joints_hip
+    400024: Characterskibinded:character:Joints_L_Dijbeen
+    400026: Characterskibinded:character:Joints_L_Schouder
+    400028: Characterskibinded:character:Joints_Pelvis
+    400030: Characterskibinded:character:Joints_R_Dijbeen
+    400032: Characterskibinded:character:Joints_R_Schouder
+    400034: Characterskibinded:character:knee
+    400036: Characterskibinded:character:knee1
+    400038: Characterskibinded:character:nek
+    400040: Characterskibinded:character:Pols
+    400042: Characterskibinded:character:Pols1
+    400044: Characterskibinded:character:Root
+    400046: Characterskibinded:character:rugboven
+    400048: Characterskibinded:character:rugonder
+    400050: Characterskibinded:character:voet
+    400052: Characterskibinded:character:voet1
+    400054: //RootNode
+    4300000: Characterskibinded:character:Charactermodel:Characterskibinded:character:Charactermodel:character1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Characterskibinded:character:Charactermodel:Characterskibinded:character:Charactermodel:character1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

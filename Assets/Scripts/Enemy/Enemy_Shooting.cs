@@ -1,25 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Enemy_Shooting : MonoBehaviour {
 
     [SerializeField]
     GameObject _bullet;
 
-    float _time = 10;
-    float _maxTime = 10;
+    [SerializeField]
+    List<GameObject> _bulletsInScene = new List<GameObject>();
 
-    /*
-        Wat moet ik schieten ?
-        Wanneer mag ik schieten ? {
-            ik mag alleen schieten als er geen kogels in het veld zijn.
-        }
-        
-    */
-    
+    // dit zorgt ervoor dat de list leeg gemaakt kan worden.
+    // wanneer de bullet destroyed is, moet deze variable een call krijgen en de list leeg maken.
+    public List<GameObject> SetBulletsInSceneList { get { return _bulletsInScene; } set { _bulletsInScene = value; } }
+
+    float _time = 10;
+    float _maxTime = 10;    
 
     void Update()
     {
+        // simple timer, wil be changed.
         _time-=.05f;
         if(_time <=0)
         {
@@ -31,10 +31,12 @@ public class Enemy_Shooting : MonoBehaviour {
     public void Shoot()
     {
         // mag alleen schieten als er geen kogels in het veld zijn.
+        if (_bulletsInScene.Count != 0)
+            return;
         
-        GameObject go = Instantiate(_bullet);
+        GameObject go = Instantiate(_bullet) as GameObject;
         go.transform.position = this.gameObject.transform.position;
-        Debug.Log("Enemy Shoot");
+        _bulletsInScene.Add(go);
     }
     
 }
