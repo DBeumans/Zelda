@@ -1,16 +1,17 @@
 fileFormatVersion: 2
-guid: 296c4bb7ab2597149aded459e66b6358
-timeCreated: 1485182222
+guid: 6189813cfc5954844a1c1a70644823cc
+timeCreated: 1484224618
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Characterskibinded:character:Charactermodel:shield
-    9500000: //RootNode
+    100000: Adult_link
+    100002: //RootNode
+    400000: Adult_link
+    400002: //RootNode
+    2300000: Adult_link
+    3300000: Adult_link
+    4300000: Adult_link
   materials:
     importMaterials: 1
     materialName: 0
@@ -57,7 +58,6 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -68,12 +68,9 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
-    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
