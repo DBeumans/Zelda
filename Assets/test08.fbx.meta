@@ -156,6 +156,31 @@ ModelImporter:
     4300044: pPlane2
     4300046: pPlane3
     4300048: Roof
+    6400000: big_fence01
+    6400002: big_fence010
+    6400004: big_fence02
+    6400006: big_fence03
+    6400008: big_fence04
+    6400010: big_fence05
+    6400012: big_fence06
+    6400014: big_fence07
+    6400016: big_fence08
+    6400018: big_fence09
+    6400020: fence010
+    6400022: fence011
+    6400024: fence012
+    6400026: fence013
+    6400028: fence05
+    6400030: fence07
+    6400032: fence08
+    6400034: fence09
+    6400036: fence_Gate
+    6400038: fence_Gate1
+    6400040: midBox
+    6400042: pPlane2
+    6400044: pPlane3
+    6400046: Roof
+    6400048: Wall_Floor
   materials:
     importMaterials: 1
     materialName: 0
@@ -180,9 +205,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 20
+    globalScale: 80
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -202,6 +227,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -212,7 +238,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1
