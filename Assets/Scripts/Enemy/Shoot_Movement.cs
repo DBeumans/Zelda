@@ -5,8 +5,8 @@ public class Shoot_Movement : MonoBehaviour {
 	private GameObject _player;
 	private Vector3 _target;
 
-    private Player_Atteck _playerAtteck;
-    private Enemy_Atteck _enemyAtteck;
+    private Player_attack _playerattack;
+    private Enemy_attack _enemyattack;
     private Enemy_Shooting _enemyShooting;
 	
 	void Start() 
@@ -14,8 +14,8 @@ public class Shoot_Movement : MonoBehaviour {
 		_enemy = GameObject.FindWithTag("Enemy");
 		_player = GameObject.FindWithTag("Player");
 		_target = _player.transform.position;
-        _playerAtteck = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Atteck>();
-        _enemyAtteck = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy_Atteck>();
+        _playerattack = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_attack>();
+        _enemyattack = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy_attack>();
         _enemyShooting = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy_Shooting>();
 	}
 	void Update()
@@ -27,7 +27,7 @@ public class Shoot_Movement : MonoBehaviour {
     void OnTriggerEnter(Collider other) 
     {
         if (other.tag == "Player") {
-            if (_playerAtteck.atteck) {
+            if (_playerattack.attack) {
                 _target = _enemy.transform.position;
             } else {
                 _enemyShooting.SetBulletsInSceneList.RemoveAt(0);
@@ -35,7 +35,7 @@ public class Shoot_Movement : MonoBehaviour {
             }
         }
         if (other.tag == "Enemy") {
-            if (_enemyAtteck.atteck) {
+            if (_enemyattack.attack) {
                 _target = _player.transform.position;
             } else {
                 _enemyShooting.SetBulletsInSceneList.RemoveAt(0);

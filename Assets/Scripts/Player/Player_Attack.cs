@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Atteck : MonoBehaviour {
+public class Player_attack : MonoBehaviour {
 
-	private bool _atteck = false;
+	private bool _attack = false;
 
-	public bool atteck { get { return _atteck; } }
+	public bool attack { get { return _attack; } }
 	
 	// Update is called once per frame
 	void Update() {
 		if (Input.GetKey(KeyCode.Space)) {
-			_atteck = true;
+			_attack = true;
 		} else {
-			_atteck = false;
+			_attack = false;
 		}
 	}
 }

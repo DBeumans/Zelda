@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Enemy_Atteck : MonoBehaviour {
+public class Enemy_attack : MonoBehaviour {
 
-	private bool _atteck = false;
+	private bool _attack = false;
 
 	private IEnumerator coroutine;
-	private float _attecking;
+	private float _attacking;
 
-	public bool atteck { get { return _atteck; } }
+	public bool attack { get { return _attack; } }
 	
 	void Start() {
 		coroutine = RandomNum(3.0f);
@@ -16,16 +16,16 @@ public class Enemy_Atteck : MonoBehaviour {
 	}
 
 	void Update() {
-		if (_attecking < 5) {
-			_atteck = true;
+		if (_attacking < 5) {
+			_attack = true;
 		} else {
-			_atteck = false;
+			_attack = false;
 		}
 	}
 
 	private IEnumerator RandomNum(float waitTime) {
 		while(true) {
-			_attecking = Random.Range(0, 10);
+			_attacking = Random.Range(0, 10);
 			yield return new WaitForSeconds(3);
 		}
 	}
