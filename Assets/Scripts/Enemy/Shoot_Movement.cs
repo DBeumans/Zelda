@@ -6,7 +6,7 @@ public class Shoot_Movement : MonoBehaviour {
 	private Vector3 _target;
 
     private PlayerAttack _playerattack;
-    private Enemy_attack _enemyattack;
+    private EnemyAttack _enemyattack;
     private Enemy_Shooting _enemyShooting;
 	
 	void Start() 
@@ -15,7 +15,7 @@ public class Shoot_Movement : MonoBehaviour {
 		_player = GameObject.FindWithTag("Player");
 		_target = _player.transform.position;
         _playerattack = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAttack>();
-        _enemyattack = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy_attack>();
+        _enemyattack = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyAttack>();
         _enemyShooting = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy_Shooting>();
 	}
 	void Update()

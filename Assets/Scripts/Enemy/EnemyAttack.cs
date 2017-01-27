@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Enemy_attack : MonoBehaviour {
+public class EnemyAttack : MonoBehaviour {
 
 	private bool _attack = false;
 
