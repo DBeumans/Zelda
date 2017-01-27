@@ -57,8 +57,6 @@ public class CameraMovement : MonoBehaviour
             transform.localEulerAngles = new Vector3(_angleX, _angleY, _angleZ);
         }
 
-        if (this.transform.localEulerAngles.y < -30 || this.transform.localEulerAngles.y > 30)
-            this.transform.localEulerAngles = new Vector3(_angleX, _angleY, _angleZ);
        
     }
 }
