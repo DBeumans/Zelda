@@ -35,6 +35,7 @@ public class Enemy_Shooting : MonoBehaviour {
             return;
         
         GameObject go = Instantiate(_bullet) as GameObject;
+        go.gameObject.name = "bullet";
         go.transform.position = this.gameObject.transform.position;
         _bulletsInScene.Add(go);
     }
