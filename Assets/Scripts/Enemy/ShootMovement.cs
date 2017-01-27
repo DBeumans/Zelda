@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Shoot_Movement : MonoBehaviour {
+public class ShootMovement : MonoBehaviour {
 	private GameObject _enemy;
 	private GameObject _player;
 	private Vector3 _target;
@@ -33,14 +33,16 @@ public class Shoot_Movement : MonoBehaviour {
                 _enemyShooting.SetBulletsInSceneList.RemoveAt(0);
                 Destroy(this.gameObject);
             }
-        }
-        if (other.tag == "Enemy") {
+        } else if (other.tag == "Enemy") {
             if (_enemyattack.attack) {
                 _target = _player.transform.position;
             } else {
                 _enemyShooting.SetBulletsInSceneList.RemoveAt(0);
                 Destroy(this.gameObject);
             }
+        } else {
+            _enemyShooting.SetBulletsInSceneList.RemoveAt(0);
+            Destroy(this.gameObject);
         }
     }
 
