@@ -7,6 +7,7 @@ public class Shoot_Movement : MonoBehaviour {
 
     private Player_Atteck _playerAtteck;
     private Enemy_Atteck _enemyAtteck;
+    private Enemy_Shooting _enemyShooting;
 	
 	void Start() 
     {
@@ -15,6 +16,7 @@ public class Shoot_Movement : MonoBehaviour {
 		_target = _player.transform.position;
         _playerAtteck = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Atteck>();
         _enemyAtteck = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy_Atteck>();
+        _enemyShooting = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy_Shooting>();
 	}
 	void Update()
     {
@@ -28,6 +30,7 @@ public class Shoot_Movement : MonoBehaviour {
             if (_playerAtteck.atteck) {
                 _target = _enemy.transform.position;
             } else {
+                _enemyShooting.SetBulletsInSceneList.RemoveAt(0);
                 Destroy(this.gameObject);
             }
         }
@@ -35,6 +38,7 @@ public class Shoot_Movement : MonoBehaviour {
             if (_enemyAtteck.atteck) {
                 _target = _player.transform.position;
             } else {
+                _enemyShooting.SetBulletsInSceneList.RemoveAt(0);
                 Destroy(this.gameObject);
             }
         }
