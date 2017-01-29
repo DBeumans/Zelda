@@ -10,14 +10,14 @@ public class Enemy_Movement : MonoBehaviour {
     [SerializeField]
     private bool followPath = false;
     
-    private Vector2 currentVelocity;
-    private Vector2 currentPosition;
+    private Vector3 currentVelocity;
+    private Vector3 currentPosition;
     
-    private Vector2 currentTarget;
+    private Vector3 currentTarget;
 
     void Start()
     {
-        currentVelocity = new Vector2(0, 0);
+        currentVelocity = new Vector3(0, 0,0);
         currentPosition = transform.position;
     }
     
@@ -26,12 +26,12 @@ public class Enemy_Movement : MonoBehaviour {
         Seek();
     }
 
-    public void setTarget(Vector2 target)
+    public void setTarget(Vector3 target)
     {
         currentTarget = target;
     }
     
-    public Vector2 Target
+    public Vector3 Target
     {
         get
         {
@@ -41,12 +41,12 @@ public class Enemy_Movement : MonoBehaviour {
 
     void Seek()
     {
-        Vector2 desiredStep = currentTarget - currentPosition;
+        Vector3 desiredStep = currentTarget - currentPosition;
         desiredStep.Normalize();
         
-        Vector2 desiredVelocity = desiredStep * maxSpeed;
+        Vector3 desiredVelocity = desiredStep * maxSpeed;
         
-        Vector2 steeringForce = desiredVelocity - currentVelocity;
+        Vector3 steeringForce = desiredVelocity - currentVelocity;
         
         currentVelocity += steeringForce / mass;
         

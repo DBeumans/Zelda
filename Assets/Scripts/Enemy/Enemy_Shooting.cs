@@ -23,6 +23,7 @@ public class Enemy_Shooting : MonoBehaviour {
         _time-=.05f;
         if(_time <=0)
         {
+            _maxTime = Random.Range(1, 10);
             _time = _maxTime;
             Shoot();
         }

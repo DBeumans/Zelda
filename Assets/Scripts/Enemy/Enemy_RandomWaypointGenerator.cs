@@ -15,14 +15,14 @@ public class Enemy_RandomWaypointGenerator : MonoBehaviour {
     void Start()
     {
         // X
-        _minimalX = -_cube.transform.localScale.x / 2;
-        _maximalX = _cube.transform.localScale.x / 2;
+        _minimalX = -5;
+        _maximalX = 5;
         // Y 
-        _minimalY = -_cube.transform.localScale.y / 2;
-        _maximalY = _cube.transform.localScale.y / 2;
+        _minimalY = 0;
+        _maximalY = 5;
         // Z
-        _minimalZ = -_cube.transform.localScale.z / 2;
-        _maximalZ = _cube.transform.localScale.z / 2;
+        _minimalZ = -5;
+        _maximalZ = 5;
 
         _enemyWaypointBehaviour = GetComponent<Enemy_WaypointBehaviour>();
         StartCoroutine(GenerateWayPoint());
