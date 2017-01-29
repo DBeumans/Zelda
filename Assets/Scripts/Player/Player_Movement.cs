@@ -7,6 +7,9 @@ public class Player_Movement : InputBehaviour {
     float _movementSpeed = 20f;
     [SerializeField]
     float _rotationSpeed = 2f;
+
+    public float GetAxis { get { return _z; } }
+
     void Update() {
         KeysCheck();
         Vector3 _angle = new Vector3(0f, _x, 0f);

@@ -12,7 +12,7 @@ public class CameraMovement : MonoBehaviour
 
     [SerializeField]
     float _angleX, _angleY, _angleZ;
-    
+
     [SerializeField]
     float _posX, _posY, _posZ;
 
