@@ -8,6 +8,7 @@ public class ShootMovement : MonoBehaviour {
     private PlayerAttack _playerattack;
     private EnemyAttack _enemyattack;
     private Enemy_Shooting _enemyShooting;
+    private bool _going = true;
 	
 	void Start() 
     {
@@ -18,8 +19,14 @@ public class ShootMovement : MonoBehaviour {
         _enemyattack = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyAttack>();
         _enemyShooting = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy_Shooting>();
 	}
-	void Update()
+	void FixedUpdate()
     {
+        if (_going) {
+            _target = _player.transform.position;
+        } else {
+            _target = _enemy.transform.position;
+        }
+
         transform.LookAt(_target);
         transform.position += GetForward() / 10;
     }
@@ -29,6 +36,7 @@ public class ShootMovement : MonoBehaviour {
         if (other.tag == "Player") {
             if (_playerattack.attack) {
                 _target = _enemy.transform.position;
+                _going = false;
             } else {
                 _enemyShooting.SetBulletsInSceneList.RemoveAt(0);
                 Destroy(this.gameObject);
@@ -36,6 +44,7 @@ public class ShootMovement : MonoBehaviour {
         } else if (other.tag == "Enemy") {
             if (_enemyattack.attack) {
                 _target = _player.transform.position;
+                _going = true;
             } else {
                 _enemyShooting.SetBulletsInSceneList.RemoveAt(0);
                 Destroy(this.gameObject);
