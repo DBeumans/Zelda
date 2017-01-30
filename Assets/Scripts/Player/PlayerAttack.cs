@@ -2,19 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class PlayerAttack : InputBehaviour
 {
 
 	private bool _attack = false;
 
+    bool _canAttack = true;
+
 	public bool attack { get { return _attack; } }
-	
-	// Update is called once per frame
-	void Update() {
-		if (Input.GetKey(KeyCode.Space)) {
-			_attack = true;
-		} else {
-			_attack = false;
-		}
-	}
+    public bool CanAttack { get { return _canAttack; } set { _canAttack = value; } }
+
+    void Update()
+    {
+        KeysCheck();
+        if (_mouseButton1 && _canAttack)
+        {
+            _attack = true;
+            _canAttack = false;
+        }
+        else {
+            _attack = false;
+        }
+    }
 }

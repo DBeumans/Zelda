@@ -19,7 +19,6 @@ public class Enemy_Shooting : MonoBehaviour {
 
     void Update()
     {
-        // simple timer, wil be changed.
         _time-=.05f;
         if(_time <=0)
         {
@@ -31,13 +30,12 @@ public class Enemy_Shooting : MonoBehaviour {
     
     public void Shoot()
     {
-        // mag alleen schieten als er geen kogels in het veld zijn.
         if (_bulletsInScene.Count != 0)
             return;
-        
+        Vector3 _targetPos = this.gameObject.transform.position;
         GameObject go = Instantiate(_bullet) as GameObject;
         go.gameObject.name = "bullet";
-        go.transform.position = this.gameObject.transform.position;
+        go.transform.position = new Vector3(_targetPos.x, _targetPos.y, _targetPos.z+.4f);
         _bulletsInScene.Add(go);
 
     }
