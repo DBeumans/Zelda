@@ -23,6 +23,15 @@ public class EnemyAttack : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerEnter(Collider other) {
+		if (other.tag == "Bullet" && _attack) {
+			print("attack");
+		}
+		if (other.tag == "Bullet" && !_attack) {
+			print("is hited");
+		}
+	}
+
 	private IEnumerator RandomNum(float waitTime) {
 		while(true) {
 			_attacking = Random.Range(0, 10);
