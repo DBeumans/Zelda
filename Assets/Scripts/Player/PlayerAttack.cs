@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlayerAttack : InputBehaviour
+﻿public class PlayerAttack : InputBehaviour
 {
 
 	private bool _attack = false;

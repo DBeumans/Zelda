@@ -10,8 +10,8 @@ public class EnemyAttack : MonoBehaviour {
     private bool _attackAnimation;
     private bool _hitAnimation;
 	public bool attack { get { return _attack; } }
-    public bool AttackAnimation { get { return _attackAnimation;} }
-    public bool HitAnimation { get { return _hitAnimation; } }
+    public bool attackAnimation { get { return _attackAnimation;} }
+    public bool hitAnimation { get { return _hitAnimation; } }
 	
 	void Start() {
 		coroutine = RandomNum(3.0f);

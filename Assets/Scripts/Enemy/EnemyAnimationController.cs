@@ -17,8 +17,8 @@ public class EnemyAnimationController : MonoBehaviour {
 
     void Update()
     {
-        _isAttacking = _enemy_Attack.AttackAnimation;
-        _isHit = _enemy_Attack.HitAnimation;
+        _isAttacking = _enemy_Attack.attackAnimation;
+        _isHit = _enemy_Attack.hitAnimation;
         _animator.SetBool("Hit", _isHit);
         _animator.SetBool("Attack", _isAttacking);
     }
