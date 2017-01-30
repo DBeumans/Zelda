@@ -2,13 +2,11 @@
 using System.Collections;
 
 public class TargetBehaviour : MonoBehaviour {
+    [SerializeField]
 	private GameObject _camera;
 	private Vector3 _look;
 	private float _zAngle;
 
-	void Start() {
-		_camera = GameObject.FindWithTag("MainCamera");
-	}
 	void Update() {
 		transform.LookAt(_camera.transform);
 		_look = transform.eulerAngles;

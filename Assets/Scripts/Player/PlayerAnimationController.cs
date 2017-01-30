@@ -7,7 +7,7 @@ public class PlayerAnimationController : InputBehaviour {
 
     Animator _animator;
 
-    bool _isWalking = false;
+    bool _isWalking=false;
     bool _isIdle = true;
     bool _isAttacking = false;
 
@@ -23,26 +23,42 @@ public class PlayerAnimationController : InputBehaviour {
 
     private void Update()
     {
-        float _vertical = _player_Movement.GetAxis;
+        float _vertical = _player_Movement.GetAxisZ;
+        float _horizontal = _player_Movement.GetAxisX;
 
+        _isAttacking = _player_Attack.attack;
 
-        if (Mathf.Abs(_vertical) > .05f)
+        if (Mathf.Abs(_vertical) == 0 && Mathf.Abs(_horizontal) == 0)
+        {
+            _isWalking = false;
+            _isIdle = true;
+        }
+
+        else
         {
             _isWalking = true;
             _isIdle = false;
+            _isAttacking = false;
         }
-            
 
-        if (Mathf.Abs(_vertical) < .05f)
-        {
-            _isIdle = true;
-            _isWalking = false;
-        }
+
+
+        _animator.SetBool("Attack", _isAttacking);
 
         _animator.SetFloat("Vertical", _vertical);
+        _animator.SetFloat("Horizontal", _horizontal);
         _animator.SetBool("isWalking", _isWalking);
         _animator.SetBool("isIdle", _isIdle);
 
+        
+        
+    }
+
+    public void ChangeAttackVariable()
+    {
+        print("FALSe");
+        _player_Attack.attack = false;
+        _player_Attack.CanAttack = true;
 
     }
 }
