@@ -7,19 +7,25 @@ public class Player_Movement : InputBehaviour {
     float _movementSpeed = 20f;
     [SerializeField]
     float _rotationSpeed = 2f;
+    [SerializeField]
+    Transform _target;
+
+    Vector3 _angles;
 
     public float GetAxis { get { return _z; } }
 
     void Update() {
         KeysCheck();
-        Vector3 _angle = new Vector3(0f, _x, 0f);
-        Vector3 _direction = new Vector3(0f, 0f, _z);
+        Vector3 _direction = new Vector3(_x, 0f, _z);
         if (_direction.magnitude > 1) {
             _direction.Normalize();
         }
         transform.Translate(_direction * _movementSpeed * Time.deltaTime);
 
-        this.transform.Rotate(_angle*_rotationSpeed);
+
+        transform.LookAt(_target);
+        _angles = transform.eulerAngles;
+        transform.eulerAngles = new Vector3(0, _angles.y, _angles.z);
     }
 
 

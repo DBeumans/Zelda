@@ -19,7 +19,7 @@ public class EnemyAttack : MonoBehaviour {
 	}
 
 	void Update() {
-		if (_attacking < 5) {
+		if (_attacking < Random.Range(0,10)) {
 			_attack = true;
 		} else {
 			_attack = false; _attackAnimation = false; _hitAnimation = false;
@@ -32,6 +32,7 @@ public class EnemyAttack : MonoBehaviour {
 		}
 		if (other.tag == "Bullet" && !_attack) {
             _hitAnimation = true;
+            print("enemy got hitted");
 		}
 	}
 

@@ -6,7 +6,8 @@ public class Enemy_Shooting : MonoBehaviour {
 
     [SerializeField]
     GameObject _bullet;
-
+    [SerializeField]
+    GameObject _bullet_Spawn_point;
     [SerializeField]
     List<GameObject> _bulletsInScene = new List<GameObject>();
 
@@ -32,10 +33,10 @@ public class Enemy_Shooting : MonoBehaviour {
     {
         if (_bulletsInScene.Count != 0)
             return;
-        Vector3 _targetPos = this.gameObject.transform.position;
+
         GameObject go = Instantiate(_bullet) as GameObject;
         go.gameObject.name = "bullet";
-        go.transform.position = new Vector3(_targetPos.x, _targetPos.y, _targetPos.z+.4f);
+        go.transform.position = _bullet_Spawn_point.transform.position;
         _bulletsInScene.Add(go);
 
     }
