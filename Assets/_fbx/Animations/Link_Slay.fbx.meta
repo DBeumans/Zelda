@@ -109,15 +109,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 1
-        functionName: CanAttack
-        data: 
-        objectReferenceParameter: {fileID: 1743098599314312, guid: c15c33496561dc649b3fd53731ef86a3,
-          type: 2}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask:
       - path: 
         weight: 1

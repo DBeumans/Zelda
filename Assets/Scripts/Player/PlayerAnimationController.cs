@@ -31,8 +31,11 @@ public class PlayerAnimationController : InputBehaviour {
             _animator.SetTrigger("isAttacking");
             _player_Attack.CanAttack = false;
         }
-            
 
+        if (!_isAttacking)
+        {
+            _player_Attack.CanAttack = true;
+        }
 
         if (Mathf.Abs(_vertical) > .05f)
         {
@@ -51,11 +54,6 @@ public class PlayerAnimationController : InputBehaviour {
         _animator.SetBool("isWalking", _isWalking);
         _animator.SetBool("isIdle", _isIdle);
 
-        if(_animator.GetAnimatorTransitionInfo(1).IsName("Attack"))
-        {
-
-        }
-       
 
     }
 }
