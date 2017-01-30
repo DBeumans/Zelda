@@ -12,7 +12,8 @@ public class Player_Movement : InputBehaviour {
 
     Vector3 _angles;
 
-    public float GetAxis { get { return _z; } }
+    public float GetAxisZ { get { return _z; } }
+    public float GetAxisX { get { return _x; } }
 
     void Update() {
         KeysCheck();

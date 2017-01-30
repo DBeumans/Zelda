@@ -11,14 +11,11 @@
     void Update()
     {
         KeysCheck();
-        if (_space)
+        if (_mouseButton1 && !_attack && _canAttack)
         {
             _attack = true;
-            _canAttack = false;
         }
-        else {
-            _attack = false;
-        }
+
     }
 
 
