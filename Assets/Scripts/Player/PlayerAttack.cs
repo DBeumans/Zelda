@@ -9,13 +9,13 @@ public class PlayerAttack : InputBehaviour
 
     bool _canAttack = true;
 
-	public bool attack { get { return _attack; } }
+	public bool attack { get { return _attack; } set { _attack = value; } }
     public bool CanAttack { get { return _canAttack; } set { _canAttack = value; } }
 
     void Update()
     {
         KeysCheck();
-        if (_mouseButton1 && _canAttack)
+        if (_space)
         {
             _attack = true;
             _canAttack = false;
@@ -24,4 +24,6 @@ public class PlayerAttack : InputBehaviour
             _attack = false;
         }
     }
+
+
 }

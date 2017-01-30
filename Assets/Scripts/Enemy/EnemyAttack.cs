@@ -7,8 +7,11 @@ public class EnemyAttack : MonoBehaviour {
 
 	private IEnumerator coroutine;
 	private float _attacking;
-
+    private bool _attackAnimation;
+    private bool _hitAnimation;
 	public bool attack { get { return _attack; } }
+    public bool AttackAnimation { get { return _attackAnimation;} }
+    public bool HitAnimation { get { return _hitAnimation; } }
 	
 	void Start() {
 		coroutine = RandomNum(3.0f);
@@ -19,16 +22,16 @@ public class EnemyAttack : MonoBehaviour {
 		if (_attacking < 5) {
 			_attack = true;
 		} else {
-			_attack = false;
+			_attack = false; _attackAnimation = false; _hitAnimation = false;
 		}
 	}
 
 	void OnTriggerEnter(Collider other) {
 		if (other.tag == "Bullet" && _attack) {
-			print("attack");
+            _attackAnimation = true;
 		}
 		if (other.tag == "Bullet" && !_attack) {
-			print("is hited");
+            _hitAnimation = true;
 		}
 	}
 

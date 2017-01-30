@@ -82,7 +82,7 @@ ModelImporter:
     4300016: enemy:L_Voet
     4300018: enemy:L_Been_boven
     4300020: enemy:L_been_onder
-    7400000: Take 001
+    7400000: Enemy_Attack
     9500000: //RootNode
     13700000: enemy:borst
     13700002: enemy:Head
@@ -115,11 +115,106 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Enemy_Attack
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: enemy:ganon
+        weight: 1
+      - path: enemy:ganon/enemy:borst
+        weight: 1
+      - path: enemy:ganon/enemy:Head
+        weight: 1
+      - path: enemy:ganon/enemy:heup
+        weight: 1
+      - path: enemy:ganon/enemy:L_Been_boven
+        weight: 1
+      - path: enemy:ganon/enemy:L_been_onder
+        weight: 1
+      - path: enemy:ganon/enemy:L_bovenarm
+        weight: 1
+      - path: enemy:ganon/enemy:L_ear
+        weight: 1
+      - path: enemy:ganon/enemy:L_hand
+        weight: 1
+      - path: enemy:ganon/enemy:L_hand/enemy:staff
+        weight: 1
+      - path: enemy:ganon/enemy:L_onderarm
+        weight: 1
+      - path: enemy:ganon/enemy:L_Voet
+        weight: 1
+      - path: enemy:Root_joint
+        weight: 1
+      - path: enemy:Root_joint/enemy:Heup
+        weight: 1
+      - path: enemy:Root_joint/enemy:Heup/enemy:Rug
+        weight: 1
+      - path: enemy:Root_joint/enemy:Heup/enemy:Rug/enemy:Head 1
+        weight: 1
+      - path: enemy:Root_joint/enemy:L_bovenbeen
+        weight: 1
+      - path: enemy:Root_joint/enemy:L_bovenbeen/enemy:L_knee
+        weight: 1
+      - path: enemy:Root_joint/enemy:L_bovenbeen/enemy:L_knee/enemy:L_enkel
+        weight: 1
+      - path: enemy:Root_joint/enemy:L_bovenbeen/enemy:L_knee/enemy:L_enkel/enemy:L_voet
+        weight: 1
+      - path: enemy:Root_joint/enemy:L_schouder
+        weight: 1
+      - path: enemy:Root_joint/enemy:L_schouder/enemy:L_eblow
+        weight: 1
+      - path: enemy:Root_joint/enemy:L_schouder/enemy:L_eblow/enemy:L_pols
+        weight: 1
+      - path: enemy:Root_joint/enemy:L_schouder/enemy:L_eblow/enemy:L_pols/enemy:L_hand
+          1
+        weight: 1
+      - path: enemy:Root_joint/enemy:R_bovenbeen
+        weight: 1
+      - path: enemy:Root_joint/enemy:R_bovenbeen/enemy:R_knee
+        weight: 1
+      - path: enemy:Root_joint/enemy:R_bovenbeen/enemy:R_knee/enemy:R_enkel
+        weight: 1
+      - path: enemy:Root_joint/enemy:R_bovenbeen/enemy:R_knee/enemy:R_enkel/enemy:R_voet
+        weight: 1
+      - path: enemy:Root_joint/enemy:R_schouder
+        weight: 1
+      - path: enemy:Root_joint/enemy:R_schouder/enemy:R_elbow
+        weight: 1
+      - path: enemy:Root_joint/enemy:R_schouder/enemy:R_elbow/enemy:R_pols
+        weight: 1
+      - path: enemy:Root_joint/enemy:R_schouder/enemy:R_elbow/enemy:R_pols/enemy:R_hand
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 10
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -141,6 +236,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -151,7 +247,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1

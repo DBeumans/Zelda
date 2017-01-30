@@ -24,18 +24,7 @@ public class PlayerAnimationController : InputBehaviour {
     private void Update()
     {
         float _vertical = _player_Movement.GetAxis;
-        _isAttacking = _player_Attack.attack;
 
-        if (_isAttacking)
-        {
-            _animator.SetTrigger("isAttacking");
-            _player_Attack.CanAttack = false;
-        }
-
-        if (!_isAttacking)
-        {
-            _player_Attack.CanAttack = true;
-        }
 
         if (Mathf.Abs(_vertical) > .05f)
         {
