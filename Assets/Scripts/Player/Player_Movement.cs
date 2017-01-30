@@ -6,8 +6,6 @@ public class Player_Movement : InputBehaviour {
     [SerializeField]
     float _movementSpeed = 20f;
     [SerializeField]
-    float _rotationSpeed = 2f;
-    [SerializeField]
     Transform _target;
 
     Vector3 _angles;

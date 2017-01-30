@@ -9,6 +9,8 @@ public class ShootMovement : MonoBehaviour {
     private EnemyAttack _enemyattack;
     private Enemy_Shooting _enemyShooting;
     private bool _going = true;
+
+    public bool GetTarget { get { return _going; } }
 	
 	void Start() 
     {
@@ -23,8 +25,10 @@ public class ShootMovement : MonoBehaviour {
     {
         if (_going) {
             _target = _player.transform.position;
+            this.gameObject.layer = LayerMask.NameToLayer("IgnoreEnemyCollision");
         } else {
             _target = _enemy.transform.position;
+            this.gameObject.layer = LayerMask.NameToLayer("Enemy");
         }
 
         transform.LookAt(_target);
