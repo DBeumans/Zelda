@@ -10,6 +10,7 @@ public class Player_Movement : InputBehaviour {
 
     Vector3 _angles;
 
+    public float GetMovementSpeed { get { return _movementSpeed; } set { _movementSpeed = value; } }
     public float GetAxisZ { get { return _z; } }
     public float GetAxisX { get { return _x; } }
 

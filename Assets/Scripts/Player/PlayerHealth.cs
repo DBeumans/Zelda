@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -13,17 +14,24 @@ public class PlayerHealth : MonoBehaviour {
 	void Start () {
 		_attack = gameObject.GetComponent<PlayerAttack>();
 	}
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Bullet")
+        {
+            if(!_attack.attack)
+            {
+                GetDamage(1);
+            }
+        }
+    }
+    void GetDamage(int damage)
+    {
+        _lives -= damage;
+    }
 
-	void Update () {
-		if (_gethited) {
-			_gethited = false;
-		}
-		if (!_attack.attack && !_gethited) {
-			_lives--;
-			_gethited = true;
-		}
-		if (_lives >= 0) {
-			print("Dead");
-		}
-	}
+    public void Death()
+    {
+        Time.timeScale = 0;
+        SceneManager.LoadScene(0);
+    }
 }

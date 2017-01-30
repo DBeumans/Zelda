@@ -9,6 +9,8 @@ public class Enemy_Movement : MonoBehaviour {
     private float mass = 20;
     [SerializeField]
     private bool followPath = false;
+
+    public float GetMaxSpeed { get { return maxSpeed; } set { maxSpeed = value; } }
     
     private Vector3 currentVelocity;
     private Vector3 currentPosition;
