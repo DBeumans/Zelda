@@ -15,12 +15,15 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	void Update () {
-		if (_attack && !_gethited) {
+		if (_gethited) {
+			_gethited = false;
+		}
+		if (!_attack.attack && !_gethited) {
 			_lives--;
 			_gethited = true;
 		}
-		if (!_attack && _gethited) {
-			_gethited = false;
+		if (_lives >= 0) {
+			print("Dead");
 		}
 	}
 }
